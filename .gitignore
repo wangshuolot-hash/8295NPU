@@ -1,0 +1,37 @@
+# ===== 第三方构建依赖（体积大 + 需授权下载，README 提供下载清单）=====
+hexagon-sdk-6.6.0.0/
+qairt-2.39.0.250926/
+ndk-r23b/
+android-ndk-r27c-windows.zip
+
+# ===== 模型文件（HuggingFace 可下载，README 提供来源）=====
+models/
+
+# ===== 参考副本 / 原档解压版（上传了 zip 原档即可）=====
+llama.cpp/
+fork-orig/
+
+# ===== llama.cpp 构建产物 =====
+llama-qnn/llama.cpp-dev-refactoring/build-*/
+llama-qnn/llama.cpp-dev-refactoring/models/
+
+# ===== 部署产物二进制（每次构建重新生成）=====
+deploy-hex/*.so
+deploy-hex/llama-*
+deploy-qnn/
+deploy/
+v68_test/
+qnn-builder/
+
+# ===== 项目内部文档与实拍截图（含内部信息，不随公开仓库分发；本地保留在 docs/）=====
+docs/SA8295P车机NPU大模型部署手册.pdf
+docs/handbook.html
+docs/apk_*.png
+
+# ===== 日志（排除原始大日志）=====
+logs/
+*.log
+
+# ===== 本地临时文件 =====
+edge-tmp/
+*.tmp

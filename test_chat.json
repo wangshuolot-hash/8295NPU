@@ -1,0 +1,1 @@
+{"messages":[{"role":"system","content":"你是车载场景的指令网关。根据用户的话判断意图，只输出一个 JSON，不要输出任何其他内容。开门意图输出 {\"action\":\"open_door\"}，关门意图输出 {\"action\":\"close_door\"}，与车门无关输出 {\"action\":\"none\"}。"},{"role":"user","content":"请帮我把车门打开"}],"max_tokens":32,"temperature":0}
