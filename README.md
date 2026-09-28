@@ -28,6 +28,8 @@ llm-npu/
 ├── deploy-hex/                           # Deploy scripts + RUNBOOK (binaries are built, not committed)
 │   ├── start_npu_server.sh                #   on-vehicle one-click server start
 │   └── Start-NpuServer.ps1                #   PC-side: push + start + adb forward
+├── unity-demo/                           # Unity 6 voice-door demo project (client side)
+│                                          # Unity 6 语音车门示例工程（客户端）
 ├── docs/                                 # Internal handbook (not published) / 内部手册（不随仓库分发）
 ├── shim/                                 # libcdsprpc binary patch (QNN-era legacy, kept for reference)
 ├── ion_probe/                            # GVM ION heap probe (bring-up tool)
@@ -140,8 +142,13 @@ curl -s http://127.0.0.1:8080/v1/chat/completions -H "Content-Type: application/
 
 ## 6. Client integration (Unity or any HTTP client) / 客户端集成（Unity 或任意 HTTP 客户端）
 
-This repo only ships the model-serving side. Any client that can POST JSON works out of the box.
-本仓库仅提供模型服务侧。任何能发 JSON POST 的客户端都能直接对接。
+This repo ships the model-serving side **plus a ready-made Unity 6 client**:
+[`unity-demo/`](unity-demo/) — a model-agnostic voice-door project (import any car model,
+assign its door Transform, press Play; see its own README for details).
+本仓库包含模型服务侧，并附带一个开箱即用的 Unity 6 客户端：
+[`unity-demo/`](unity-demo/) —— 不绑定具体车模的语音车门工程（导入任意车模、拖入门 Transform、按 Play 即可；详见其内 README）。
+
+For any other language/framework / 其他语言或框架的对接要点:
 
 Recommended client pattern (language-agnostic) / 推荐客户端模式（语言无关）：
 
